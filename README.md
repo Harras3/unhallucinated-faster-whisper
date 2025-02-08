@@ -2,16 +2,23 @@
 
 # Unhallucinated Faster Whisper
 
-# Install the package
+### Install the package
+```
 pip install unhallucinated-faster-whisper
-
-# Use just like normal faster-whisper
+```
+### Usage (Same as Faster Whisper)
+```
 from faster_whisper import WhisperModel 
 model_size = "turbo"
 model = WhisperModel(model_size, device="cpu")  
+```
 
-# Just pass unhallucinated=True if you want to use the new feature
+### Enabling the Unhallucination Feature 
+Simply pass unhallucinated=True when transcribing
+```
 segments, info = model.transcribe("voice.mp3", unhallucinated=True)
+```
 
-# Models
-Works with every Whisper model
+### Model Compatibility
+
+Compatible with all Whisper models.
